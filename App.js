@@ -47,7 +47,7 @@ const UploadPDFScreen = () => {
       };
 
       const response = await axios.post(
-        "http://192.168.1.37:5000/upload",
+        "https://memorycardapp.onrender.com/upload",
         payload,
         {
           headers: {
