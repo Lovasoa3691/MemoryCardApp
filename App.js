@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { View, Button, Text, ActivityIndicator, Alert } from "react-native";
+import {
+  View,
+  Button,
+  Text,
+  ActivityIndicator,
+  Alert,
+  ScrollView,
+} from "react-native";
 import axios from "axios";
 import * as DocumentPicker from "expo-document-picker";
 import * as FileSystem from "expo-file-system";
@@ -80,7 +87,7 @@ const UploadPDFScreen = () => {
       {loading && <ActivityIndicator size="large" color="#0000ff" />}
 
       {cards.length > 0 && (
-        <View style={{ marginTop: 20 }}>
+        <ScrollView style={{ marginTop: 20, maxHeight: 400 }}>
           <Text>Cartes générées :</Text>
           {cards.map((card, index) => (
             <View
@@ -96,7 +103,7 @@ const UploadPDFScreen = () => {
               <Text>{card.content}</Text>
             </View>
           ))}
-        </View>
+        </ScrollView>
       )}
     </View>
   );
