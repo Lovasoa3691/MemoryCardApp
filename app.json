@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "57b9073e-fffa-4ef4-bf84-76856b990273"
+      }
+    },
+    "owner": "julianot-dev01"
   }
 }
