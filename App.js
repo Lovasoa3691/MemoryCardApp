@@ -63,7 +63,7 @@ const UploadPDFScreen = () => {
         }
       );
 
-      console.log("Réponse du backend :", response.data);
+      // console.log("Réponse du backend :", response.data);
       setCards(response.data.cards);
     } catch (err) {
       console.error(err);
@@ -87,7 +87,7 @@ const UploadPDFScreen = () => {
       {loading && <ActivityIndicator size="large" color="#0000ff" />}
 
       {cards.length > 0 && (
-        <ScrollView style={{ marginTop: 20, maxHeight: 400 }}>
+        <ScrollView style={{ marginTop: 20 }}>
           <Text>Cartes générées :</Text>
           {cards.map((card, index) => (
             <View
